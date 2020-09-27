@@ -1,0 +1,169 @@
+object Form1: TForm1
+  Left = 1237
+  Height = 401
+  Top = 287
+  Width = 274
+  BorderIcons = []
+  Caption = 'Z2'
+  ClientHeight = 381
+  ClientWidth = 274
+  Menu = MainMenu1
+  OnShow = FormShow
+  LCLVersion = '2.0.6.0'
+  object EditA: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideBottom.Control = Label1
+    AnchorSideBottom.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 80
+    BorderSpacing.Top = 16
+    ParentFont = False
+    TabOrder = 0
+    Text = '2'
+  end
+  object EditB: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label2
+    Left = 16
+    Height = 23
+    Top = 80
+    Width = 80
+    BorderSpacing.Top = 16
+    ParentFont = False
+    TabOrder = 1
+    Text = '2'
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 16
+    Height = 15
+    Top = 16
+    Width = 59
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    Caption = 'Сторона а:'
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = EditA
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 60
+    BorderSpacing.Top = 32
+    Caption = 'Сторона b:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = EditC
+    Left = 16
+    Height = 15
+    Top = 176
+    Width = 35
+    BorderSpacing.Top = 48
+    Caption = 'Отчет:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    AnchorSideTop.Control = EditB
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 183
+    Height = 25
+    Top = 79
+    Width = 75
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 16
+    Caption = 'Посчитай'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PoleOtcheta: TMemo
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label3
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 16
+    Height = 173
+    Top = 192
+    Width = 242
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 16
+    BorderSpacing.Bottom = 16
+    ParentFont = False
+    ScrollBars = ssAutoVertical
+    TabOrder = 3
+  end
+  object EditC: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label4
+    Left = 16
+    Height = 23
+    Top = 128
+    Width = 80
+    BorderSpacing.Top = 16
+    ParentFont = False
+    TabOrder = 4
+    Text = '2'
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = EditB
+    Left = 16
+    Height = 15
+    Top = 112
+    Width = 59
+    BorderSpacing.Top = 32
+    Caption = 'Сторона c:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    left = 230
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem4: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem3Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Text|*.txt'
+    left = 275
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Text|*.txt'
+    left = 179
+  end
+end

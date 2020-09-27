@@ -1,0 +1,128 @@
+object Form1: TForm1
+  Left = 1338
+  Height = 346
+  Top = 307
+  Width = 246
+  BorderIcons = []
+  Caption = 'Z8'
+  ClientHeight = 326
+  ClientWidth = 246
+  Menu = MainMenu1
+  OnShow = FormShow
+  LCLVersion = '2.0.6.0'
+  object EditR: TEdit
+    Left = 16
+    Height = 23
+    Top = 83
+    Width = 80
+    ParentFont = False
+    TabOrder = 0
+    Text = '2'
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 13
+    Width = 110
+    Caption = 'Количество сторон:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 41
+    Caption = 'Радиус:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 14
+    Height = 15
+    Top = 126
+    Width = 35
+    Caption = 'Отчет:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 155
+    Height = 25
+    Top = 55
+    Width = 75
+    Caption = 'Посчитай'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object EditN: TEdit
+    Left = 16
+    Height = 23
+    Top = 30
+    Width = 80
+    ParentFont = False
+    TabOrder = 2
+    Text = '4'
+  end
+  object SG: TStringGrid
+    Left = 16
+    Height = 173
+    Top = 147
+    Width = 214
+    ColCount = 3
+    FixedCols = 0
+    ParentFont = False
+    RowCount = 1
+    ScrollBars = ssVertical
+    TabOrder = 3
+    Cells = (
+      3
+      0
+      0
+      'N сторон'
+      1
+      0
+      'Радиус'
+      2
+      0
+      'Результат'
+    )
+  end
+  object MainMenu1: TMainMenu
+    left = 269
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MSave: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MSaveClick
+      end
+      object MSaveOt: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MSaveOtClick
+      end
+      object MZag: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MZagClick
+      end
+    end
+    object MSpravka: TMenuItem
+      Caption = 'Справка'
+      OnClick = MSpravkaClick
+    end
+    object MExit: TMenuItem
+      Caption = 'Выход'
+      OnClick = MExitClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Text|*.txt'
+    left = 269
+    top = 64
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Text|*.txt'
+    left = 269
+    top = 122
+  end
+end
